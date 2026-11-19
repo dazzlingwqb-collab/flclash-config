@@ -11,6 +11,13 @@ dns:
     - 1.1.1.1
 
 proxies:
+  - name: "tokyo-trojan"
+    type: trojan
+    server: 165.154.231.251
+    port: 8443
+    password: 51658cd8205bc3c069f8580c32258759
+    sni: www.bing.com
+    skip-cert-verify: true
   - name: "tokyo-hy2"
     type: hysteria2
     server: 165.154.231.251
@@ -23,6 +30,7 @@ proxy-groups:
   - name: "PROXY"
     type: select
     proxies:
+      - "tokyo-trojan"
       - "tokyo-hy2"
       - DIRECT
 
