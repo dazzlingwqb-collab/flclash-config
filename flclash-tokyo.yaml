@@ -11,28 +11,19 @@ dns:
     - 1.1.1.1
 
 proxies:
-  - name: "443-vless_reality_vision"
-    type: vless
+  - name: "tokyo-hy2"
+    type: hysteria2
     server: 165.154.231.251
-    port: 443
-    uuid: d7436ea2-1135-4524-961a-22c21c700bd6
-    alterId: 0
-    cipher: auto
-    udp: true
-    tls: true
-    servername: academy.nvidia.com
-    reality-opts:
-      public-key: kaw07UPokLNmKOcpBU01lugUO6Y-QvQXnvQFeGxBAxA
-      short-id: 6ba85179e30d4fc2
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    network: tcp
+    port: 8443
+    password: 26af61f8f76b1684c260aa618841bef3
+    sni: www.bing.com
+    skip-cert-verify: true
 
 proxy-groups:
   - name: "PROXY"
     type: select
     proxies:
-      - "443-vless_reality_vision"
+      - "tokyo-hy2"
       - DIRECT
 
 rules:
