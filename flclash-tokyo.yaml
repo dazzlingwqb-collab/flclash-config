@@ -22,7 +22,7 @@ proxies:
     tls: true
     servername: academy.nvidia.com
     reality-opts:
-      public-key: kaw07UPokLNmKOcpBU01lugU06Y-QvQXnvQFeGxBAxA
+      public-key: kaw07UPokLNmKOcpBU01lugUO6Y-QvQXnvQFeGxBAxA
       short-id: 6ba85179e30d4fc2
     client-fingerprint: chrome
     flow: xtls-rprx-vision
