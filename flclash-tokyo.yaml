@@ -1,0 +1,39 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+
+proxies:
+  - name: "443-vless_reality_vision"
+    type: vless
+    server: 165.154.231.251
+    port: 443
+    uuid: d7436ea2-1135-4524-961a-22c21c700bd6
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    servername: academy.nvidia.com
+    reality-opts:
+      public-key: kaw07UPokLNmKOcpBU01lugU06Y-QvQXnvQFeGxBAxA
+      short-id: 6ba85179e30d4fc2
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    network: tcp
+
+proxy-groups:
+  - name: "PROXY"
+    type: select
+    proxies:
+      - "443-vless_reality_vision"
+      - DIRECT
+
+rules:
+  - MATCH,PROXY
