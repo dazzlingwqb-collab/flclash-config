@@ -1,0 +1,34 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+dns:
+  enable: true
+  nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+proxies:
+  - name: cst-jp-hy2
+    type: hysteria2
+    server: 154.36.176.81
+    port: 8443
+    password: 69464cd1d60577c1910d009d1b9a9355
+    sni: www.bing.com
+    skip-cert-verify: true
+  - name: cst-jp-trojan
+    type: trojan
+    server: 154.36.176.81
+    port: 8443
+    password: 6f053aca112971c6fbf71a6002ba8f8a
+    sni: www.bing.com
+    skip-cert-verify: true
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - cst-jp-hy2
+      - cst-jp-trojan
+      - DIRECT
+rules:
+  - MATCH,PROXY
