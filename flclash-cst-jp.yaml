@@ -83,4 +83,5 @@ rules:
   - DOMAIN-SUFFIX,youku.com,DIRECT
   - DOMAIN-SUFFIX,iqiyi.com,DIRECT
   - DOMAIN-SUFFIX,qiyi.com,DIRECT
+  - GEOIP,CN,DIRECT
   - MATCH,PROXY
