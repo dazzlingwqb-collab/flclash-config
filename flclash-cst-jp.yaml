@@ -44,6 +44,12 @@ rules:
   - DOMAIN-SUFFIX,amemv.com,DIRECT
   - DOMAIN-SUFFIX,toutiao.com,DIRECT
   - DOMAIN-SUFFIX,ixigua.com,DIRECT
+  - DOMAIN-SUFFIX,volcvideo.com,DIRECT
+  - DOMAIN-SUFFIX,volccdn.com,DIRECT
+  - DOMAIN-SUFFIX,byteimg.com,DIRECT
+  - DOMAIN-SUFFIX,pstatp.com,DIRECT
+  - DOMAIN-SUFFIX,douyinpic.com,DIRECT
+  - DOMAIN-SUFFIX,douyinvod.com,DIRECT
   - DOMAIN-SUFFIX,baidu.com,DIRECT
   - DOMAIN-SUFFIX,bdstatic.com,DIRECT
   - DOMAIN-SUFFIX,baidustatic.com,DIRECT
